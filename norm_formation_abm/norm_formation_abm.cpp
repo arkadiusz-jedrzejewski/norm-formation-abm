@@ -20,8 +20,8 @@ int main()
 
     Agent agent2(2, -1, distribution);
     std::cout << agent2.get_ind_prob() << std::endl;
-    //agent2.change_ind_prob();
-    //std::cout << agent2.get_ind_prob() << std::endl;
+    agent2.change_ind_prob();
+    std::cout << agent2.get_ind_prob() << std::endl;
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
