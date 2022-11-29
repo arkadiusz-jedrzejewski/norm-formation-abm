@@ -59,6 +59,15 @@ void SocialSystem::single_update()
 	one_group_size += (chosen_agent.get_opinion() - init_opinion) / 2;
 }
 
+void SocialSystem::single_mcs()
+{
+	//random sequential updating scheme
+	for (int i = 0; i < size; i++)
+	{
+		single_update();
+	}
+}
+
 void SocialSystem::print_one_group_size() const
 {
 	std::cout << "one_group_size:\t" << one_group_size << std::endl;
