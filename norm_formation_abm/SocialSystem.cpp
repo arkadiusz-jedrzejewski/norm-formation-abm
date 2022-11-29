@@ -75,9 +75,11 @@ void SocialSystem::simulation(int time_horizon)
 	std::string file_name = "name.txt";
 	std::fstream data_file(file_name, std::ios::out);
 
+	data_file << get_conc() << std::endl;
 	for (int i = 0; i < time_horizon; i++)
 	{
 		single_mcs();
+		data_file << get_conc() << std::endl;	//	saving concentration after every MCS
 	}
 
 	data_file.flush();
