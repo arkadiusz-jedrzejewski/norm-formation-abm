@@ -10,6 +10,6 @@ public:
 	SocialSystem(int size, int init_opinion, RandIndProbGenerator& distribution);
 	~SocialSystem();
 
-	void print_agents();
+	void print_agents() const;
 };
 
