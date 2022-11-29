@@ -16,7 +16,8 @@ int main()
    
     SocialSystem test_system(15, 1, distribution, generator);
     test_system.print_agents();
-    
+    test_system.choose_agent();
+    test_system.choose_agent();
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
