@@ -16,10 +16,16 @@ int main()
    
     SocialSystem test_system(15, 1, distribution, generator);
     test_system.print_agents();
-    test_system.choose_agent();
-    test_system.choose_agent();
-    test_system.choose_agent();
-    test_system.choose_agent();
+    test_system.single_update();
+    test_system.single_update();
+    test_system.single_update();
+    //Agent& agent = test_system.choose_agent();
+    //test_system.choose_agent();
+    //test_system.choose_agent();
+    std::cout << "///////////////////" << std::endl;
+    //agent.change_opinion();
+    //agent.change_ind_prob();
+    test_system.print_agents();
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania

@@ -14,5 +14,6 @@ public:
 
 	void print_agents() const;
 	Agent& choose_agent();
+	void single_update();
 };
 
