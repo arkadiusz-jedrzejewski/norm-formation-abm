@@ -39,6 +39,7 @@ void Agent::set_opinion(int new_opinion)
 
 void Agent::reconsider_opinion(double conc, RNG& generator)
 {
+	double q = 2;
 	std::uniform_real_distribution<double> unif_real_distribution(0, 1);
 	double rand = unif_real_distribution(generator);
 	if (rand < ind_prob)
@@ -52,7 +53,10 @@ void Agent::reconsider_opinion(double conc, RNG& generator)
 	else 
 	{
 		//conformity, social learining
-		
+		if (unif_real_distribution(generator) < std::pow(conc, q))
+		{
+			set_opinion(1);
+		}
 	}
 }
 
