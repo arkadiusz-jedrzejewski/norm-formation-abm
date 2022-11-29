@@ -32,4 +32,9 @@ void Agent::change_opinion()
 	opinion *=-1;
 }
 
+void Agent::reconsider_opinion(int one_group_size)
+{
+
+}
+
 

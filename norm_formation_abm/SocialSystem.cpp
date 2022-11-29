@@ -52,7 +52,7 @@ Agent& SocialSystem::choose_agent()
 void SocialSystem::single_update()
 {
 	Agent& chosen_agent = choose_agent();
-	chosen_agent.change_opinion();
+	chosen_agent.change_opinion(); // TODO: change_opinion() may return changed opinion -> more compact code
 	one_group_size += chosen_agent.get_opinion();
 }
 
