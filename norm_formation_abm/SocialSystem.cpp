@@ -9,6 +9,7 @@ SocialSystem::SocialSystem(int size, int init_opinion, RandIndProbGenerator& dis
 	{
 		agents[i] = new Agent(i, init_opinion, distribution);
 	}
+	unif_int_distribution = std::uniform_int_distribution<int>(0, size - 1);
 }
 
 SocialSystem::~SocialSystem()
@@ -33,4 +34,5 @@ void SocialSystem::print_agents() const
 
 void SocialSystem::choose_agent()
 {
+
 }

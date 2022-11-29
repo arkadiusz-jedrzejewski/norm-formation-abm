@@ -5,6 +5,7 @@ class SocialSystem
 private:
 	RNG& generator;
 	Agent** agents;
+	std::uniform_int_distribution<int> unif_int_distribution;
 	int size;
 
 public:
