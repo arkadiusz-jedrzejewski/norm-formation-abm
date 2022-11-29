@@ -6,6 +6,7 @@
 #include "Agent.h"
 #include "BernoulliDistribution.h"
 #include "Uniform.h"
+#include "SocialSystem.h"
 
 int main()
 {
@@ -13,15 +14,8 @@ int main()
     std::mt19937_64 generator(10);
     Uniform distribution(generator, 0.8);
    
-    Agent agent1(0, -1, distribution);
-    std::cout << agent1.get_ind_prob() << std::endl;
-    agent1.change_ind_prob();
-    std::cout << agent1.get_ind_prob() << std::endl;
-
-    Agent agent2(2, -1, distribution);
-    std::cout << agent2.get_ind_prob() << std::endl;
-    agent2.change_ind_prob();
-    std::cout << agent2.get_ind_prob() << std::endl;
+    SocialSystem test_system(10, 1, distribution);
+    
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
