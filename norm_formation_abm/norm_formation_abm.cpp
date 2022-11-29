@@ -12,9 +12,9 @@ int main()
 {
     std::cout << "Hello World!\n";
     std::mt19937_64 generator(10);
-    Uniform distribution(generator, 0.8);
+    Uniform distribution(generator, 0.2);
    
-    SocialSystem test_system(10, 1, distribution);
+    SocialSystem test_system(15, 1, distribution);
     test_system.print_agents();
     
 }
