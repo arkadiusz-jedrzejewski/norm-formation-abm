@@ -32,9 +32,23 @@ void Agent::change_opinion()
 	opinion *=-1;
 }
 
-void Agent::reconsider_opinion(int one_group_size)
+void Agent::reconsider_opinion(double conc, RNG& generator)
 {
-
+	std::uniform_real_distribution<double> unif_real_distribution(0, 1);
+	double rand = unif_real_distribution(generator);
+	if (rand < ind_prob)
+	{
+		//independence, individual learinig
+		if (unif_real_distribution(generator) < 0.5)
+		{
+			change_opinion();
+		}
+	}
+	else 
+	{
+		//conformity, social learining
+		
+	}
 }
 
 

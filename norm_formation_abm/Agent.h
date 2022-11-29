@@ -20,7 +20,7 @@ public:
 	void change_ind_prob();
 
 	void change_opinion();
-	void reconsider_opinion(int one_group_size);
+	void reconsider_opinion(double conc, RNG& generator);
 	
 };
 
