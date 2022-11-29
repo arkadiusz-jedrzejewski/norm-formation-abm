@@ -13,6 +13,6 @@ public:
 	~SocialSystem();
 
 	void print_agents() const;
-	void choose_agent();
+	Agent& choose_agent();
 };
 

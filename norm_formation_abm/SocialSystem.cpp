@@ -32,8 +32,9 @@ void SocialSystem::print_agents() const
 	}
 }
 
-void SocialSystem::choose_agent()
+Agent& SocialSystem::choose_agent()
 {
 	int random_number = unif_int_distribution(generator);
 	std::cout << "number:\t" << random_number << std::endl;
+	return *agents[random_number];
 }

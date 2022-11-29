@@ -18,6 +18,8 @@ int main()
     test_system.print_agents();
     test_system.choose_agent();
     test_system.choose_agent();
+    test_system.choose_agent();
+    test_system.choose_agent();
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
