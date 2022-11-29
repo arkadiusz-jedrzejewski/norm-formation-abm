@@ -40,18 +40,18 @@ void Agent::set_opinion(int new_opinion)
 
 void Agent::reconsider_opinion(double conc, RNG& generator)
 {
-	std::cout << "index:\t" << index << std::endl;	
-	std::cout << "conc:\t" << conc << std::endl;
+	//std::cout << "index:\t" << index << std::endl;	
+	//std::cout << "conc:\t" << conc << std::endl;
 	double q = 2;
 	std::uniform_real_distribution<double> unif_real_distribution(0, 1);
 	double rand = unif_real_distribution(generator);
-	std::cout << "rand:\t" << rand << std::endl;
+	//std::cout << "rand:\t" << rand << std::endl;
 	if (rand < ind_prob)
 	{
 		//independence, individual learinig
 		double rand2 = unif_real_distribution(generator);
-		std::cout << "rand2:\t" << rand2<< std::endl;
-		if (rand2 < 0.3)
+		//std::cout << "rand2:\t" << rand2<< std::endl;
+		if (rand2 < 0.9)
 		{
 			change_opinion();
 		}

@@ -54,7 +54,7 @@ void SocialSystem::single_update()
 	Agent& chosen_agent = choose_agent();
 	int init_opinion = chosen_agent.get_opinion();
 	//chosen_agent.change_opinion(); // TODO: change_opinion() may return changed opinion -> more compact code
-	double conc = (init_opinion == 1) ? (one_group_size - 1) / (size - 1) : one_group_size / size;
+	double conc = (init_opinion == 1) ? (one_group_size - 1.0) / (size - 1.0) : one_group_size / (size - 1.0);
 	chosen_agent.reconsider_opinion(conc, generator);
 	one_group_size += (chosen_agent.get_opinion() - init_opinion) / 2;
 }
@@ -65,6 +65,15 @@ void SocialSystem::single_mcs()
 	for (int i = 0; i < size; i++)
 	{
 		single_update();
+	}
+	print_one_group_size();
+}
+
+void SocialSystem::simulation(int time_horizon)
+{
+	for (int i = 0; i < time_horizon; i++)
+	{
+		single_mcs();
 	}
 }
 

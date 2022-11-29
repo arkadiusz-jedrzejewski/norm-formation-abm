@@ -17,6 +17,7 @@ public:
 	Agent& choose_agent();
 	void single_update();
 	void single_mcs();
+	void simulation(int time_horizon);
 	void print_one_group_size() const;
 };
 
