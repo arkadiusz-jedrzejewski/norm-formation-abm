@@ -20,6 +20,7 @@ public:
 	void change_ind_prob();
 
 	void change_opinion();
+	void set_opinion(int new_opinion);
 	void reconsider_opinion(double conc, RNG& generator);
 	
 };

@@ -32,6 +32,11 @@ void Agent::change_opinion()
 	opinion *=-1;
 }
 
+void Agent::set_opinion(int new_opinion)
+{
+	opinion = new_opinion;
+}
+
 void Agent::reconsider_opinion(double conc, RNG& generator)
 {
 	std::uniform_real_distribution<double> unif_real_distribution(0, 1);
