@@ -15,6 +15,7 @@ int main()
     Uniform distribution(generator, 0.8);
    
     SocialSystem test_system(10, 1, distribution);
+    test_system.print_agents();
     
 }
 
