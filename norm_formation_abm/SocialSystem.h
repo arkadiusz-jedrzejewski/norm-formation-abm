@@ -19,5 +19,7 @@ public:
 	void single_mcs();
 	void simulation(int time_horizon);
 	void print_one_group_size() const;
+
+	double get_conc() const;
 };
 
