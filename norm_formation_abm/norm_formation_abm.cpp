@@ -12,12 +12,12 @@ int main()
 {
     std::cout << "Hello World!\n";
     std::mt19937_64 generator(10);
-    BernoulliDistribution distribution(generator, 0.5);
+    BernoulliDistribution distribution(generator, 0.2);
    
-    SocialSystem test_system(150000, 1, distribution, generator);
+    SocialSystem test_system(200000, 1, distribution, generator);
     test_system.print_one_group_size();
     //test_system.print_agents();
-    test_system.simulation(20);
+    test_system.simulation(200);
     //Agent& agent = test_system.choose_agent();
     //test_system.choose_agent();
     //test_system.choose_agent();

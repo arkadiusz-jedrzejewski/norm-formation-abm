@@ -79,5 +79,5 @@ void SocialSystem::simulation(int time_horizon)
 
 void SocialSystem::print_one_group_size() const
 {
-	std::cout << "one_group_size:\t" << one_group_size << std::endl;
+	std::cout << "one_group_size:\t" << one_group_size / (double) size << std::endl;
 }
