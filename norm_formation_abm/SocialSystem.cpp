@@ -1,8 +1,8 @@
 #include "SocialSystem.h"
 #include <iostream>
 
-SocialSystem::SocialSystem(int size, int init_opinion, RandIndProbGenerator& distribution)
-	:size(size)
+SocialSystem::SocialSystem(int size, int init_opinion, RandIndProbGenerator& distribution, RNG& generator)
+	:size(size), generator(generator)
 {
 	agents = new Agent * [size];
 	for (int i = 0; i < size; i++)
@@ -29,4 +29,8 @@ void SocialSystem::print_agents() const
 			<< agents[i]->get_opinion() << "\t" 
 			<< agents[i]->get_ind_prob() << std::endl;
 	}
+}
+
+void SocialSystem::choose_agent()
+{
 }

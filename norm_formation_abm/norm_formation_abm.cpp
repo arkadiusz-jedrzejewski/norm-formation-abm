@@ -14,7 +14,7 @@ int main()
     std::mt19937_64 generator(10);
     Uniform distribution(generator, 0.2);
    
-    SocialSystem test_system(15, 1, distribution);
+    SocialSystem test_system(15, 1, distribution, generator);
     test_system.print_agents();
     
 }
