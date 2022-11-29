@@ -1,4 +1,5 @@
 #include "Agent.h"
+#include <iostream>
 
 Agent::Agent(int index, int opinion, RandIndProbGenerator& distribution)
 	: index(index), opinion(opinion), distribution(distribution)
@@ -39,13 +40,18 @@ void Agent::set_opinion(int new_opinion)
 
 void Agent::reconsider_opinion(double conc, RNG& generator)
 {
+	std::cout << "index:\t" << index << std::endl;	
+	std::cout << "conc:\t" << conc << std::endl;
 	double q = 2;
 	std::uniform_real_distribution<double> unif_real_distribution(0, 1);
 	double rand = unif_real_distribution(generator);
+	std::cout << "rand:\t" << rand << std::endl;
 	if (rand < ind_prob)
 	{
 		//independence, individual learinig
-		if (unif_real_distribution(generator) < 0.5)
+		double rand2 = unif_real_distribution(generator);
+		std::cout << "rand2:\t" << rand2<< std::endl;
+		if (rand2 < 0.3)
 		{
 			change_opinion();
 		}

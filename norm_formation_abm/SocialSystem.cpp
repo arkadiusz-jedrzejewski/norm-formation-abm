@@ -52,8 +52,11 @@ Agent& SocialSystem::choose_agent()
 void SocialSystem::single_update()
 {
 	Agent& chosen_agent = choose_agent();
-	chosen_agent.change_opinion(); // TODO: change_opinion() may return changed opinion -> more compact code
-	one_group_size += chosen_agent.get_opinion();
+	int init_opinion = chosen_agent.get_opinion();
+	//chosen_agent.change_opinion(); // TODO: change_opinion() may return changed opinion -> more compact code
+	double conc = (init_opinion == 1) ? (one_group_size - 1) / (size - 1) : one_group_size / size;
+	chosen_agent.reconsider_opinion(conc, generator);
+	one_group_size += (chosen_agent.get_opinion() - init_opinion) / 2;
 }
 
 void SocialSystem::print_one_group_size() const

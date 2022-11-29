@@ -12,10 +12,11 @@ int main()
 {
     std::cout << "Hello World!\n";
     std::mt19937_64 generator(10);
-    Uniform distribution(generator, 0.2);
+    BernoulliDistribution distribution(generator, 0.99);
    
     SocialSystem test_system(15, 1, distribution, generator);
     test_system.print_agents();
+    test_system.single_update();
     test_system.single_update();
     test_system.single_update();
     test_system.single_update();
