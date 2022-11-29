@@ -51,7 +51,7 @@ void Agent::reconsider_opinion(double conc, RNG& generator)
 		//independence, individual learinig
 		double rand2 = unif_real_distribution(generator);
 		//std::cout << "rand2:\t" << rand2<< std::endl;
-		if (rand2 < 0.9)
+		if (rand2 < 0.5)
 		{
 			change_opinion();
 		}
@@ -62,6 +62,10 @@ void Agent::reconsider_opinion(double conc, RNG& generator)
 		if (unif_real_distribution(generator) < std::pow(conc, q))
 		{
 			set_opinion(1);
+		}
+		else
+		{
+			set_opinion(-1);
 		}
 	}
 }
