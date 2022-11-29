@@ -12,11 +12,20 @@ int main()
 {
     std::cout << "Hello World!\n";
     std::mt19937_64 generator(10);
-    Uniform distribution(generator, 0.2);
+    BernoulliDistribution distribution(generator, 0.2);
    
-    SocialSystem test_system(15, 1, distribution);
-    test_system.print_agents();
-    
+    SocialSystem test_system(200000, 1, distribution, generator);
+    test_system.print_one_group_size();
+    //test_system.print_agents();
+    test_system.simulation(200);
+    //Agent& agent = test_system.choose_agent();
+    //test_system.choose_agent();
+    //test_system.choose_agent();
+    std::cout << "///////////////////" << std::endl;
+    //agent.change_opinion();
+    //agent.change_ind_prob();
+    //test_system.print_agents();
+    test_system.print_one_group_size();
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
