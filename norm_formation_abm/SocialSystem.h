@@ -7,6 +7,7 @@ private:
 	Agent** agents;
 	std::uniform_int_distribution<int> unif_int_distribution;
 	int size;
+	int one_group_size; //number of agents with opinion 1
 
 public:
 	SocialSystem(int size, int init_opinion, RandIndProbGenerator& distribution, RNG& generator);
