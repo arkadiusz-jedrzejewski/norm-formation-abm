@@ -51,5 +51,12 @@ Agent& SocialSystem::choose_agent()
 
 void SocialSystem::single_update()
 {
-	choose_agent().change_opinion();
+	Agent& chosen_agent = choose_agent();
+	chosen_agent.change_opinion();
+	one_group_size += chosen_agent.get_opinion();
+}
+
+void SocialSystem::print_one_group_size() const
+{
+	std::cout << "one_group_size:\t" << one_group_size << std::endl;
 }

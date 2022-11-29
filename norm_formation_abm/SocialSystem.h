@@ -16,5 +16,6 @@ public:
 	void print_agents() const;
 	Agent& choose_agent();
 	void single_update();
+	void print_one_group_size() const;
 };
 

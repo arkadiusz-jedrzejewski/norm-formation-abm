@@ -26,6 +26,7 @@ int main()
     //agent.change_opinion();
     //agent.change_ind_prob();
     test_system.print_agents();
+    test_system.print_one_group_size();
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
