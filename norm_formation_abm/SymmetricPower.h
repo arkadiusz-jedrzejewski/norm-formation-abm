@@ -1,7 +1,7 @@
 #pragma once
-#include "ConformityFunction.h"
+#include "ResponseFunction.h"
 class SymmetricPower :
-    public ConformityFunction
+    public ResponseFunction
 {
 private:
     double q; // exponent : f(x) = (0 <= x < 0.5) ? (2x)^q/2 : 1-(2(1-x))^q/2

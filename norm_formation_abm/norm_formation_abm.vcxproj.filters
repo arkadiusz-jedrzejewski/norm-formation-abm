@@ -33,7 +33,7 @@
     <ClCompile Include="SocialSystem.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="ConformityFunction.cpp">
+    <ClCompile Include="ResponseFunction.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
     <ClCompile Include="Power.cpp">
@@ -68,7 +68,7 @@
     <ClInclude Include="SocialSystem.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="ConformityFunction.h">
+    <ClInclude Include="ResponseFunction.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
     <ClInclude Include="Power.h">

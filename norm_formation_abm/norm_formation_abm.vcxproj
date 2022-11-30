@@ -141,7 +141,7 @@
   <ItemGroup>
     <ClCompile Include="Agent.cpp" />
     <ClCompile Include="BernoulliDistribution.cpp" />
-    <ClCompile Include="ConformityFunction.cpp" />
+    <ClCompile Include="ResponseFunction.cpp" />
     <ClCompile Include="Logistic.cpp" />
     <ClCompile Include="norm_formation_abm.cpp" />
     <ClCompile Include="Power.cpp" />
@@ -154,7 +154,7 @@
   <ItemGroup>
     <ClInclude Include="Agent.h" />
     <ClInclude Include="BernoulliDistribution.h" />
-    <ClInclude Include="ConformityFunction.h" />
+    <ClInclude Include="ResponseFunction.h" />
     <ClInclude Include="custom_types.h" />
     <ClInclude Include="Logistic.h" />
     <ClInclude Include="Power.h" />

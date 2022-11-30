@@ -1,7 +1,7 @@
 #pragma once
-#include "ConformityFunction.h"
+#include "ResponseFunction.h"
 class Logistic :
-    public ConformityFunction
+    public ResponseFunction
 {
 private:
     double x0;

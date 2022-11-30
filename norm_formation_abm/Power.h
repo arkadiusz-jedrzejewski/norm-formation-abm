@@ -1,7 +1,7 @@
 #pragma once
-#include "ConformityFunction.h"
+#include "ResponseFunction.h"
 class Power :
-    public ConformityFunction
+    public ResponseFunction
 {
 private:
     double q; // exponent : f(x) = x ^ q
