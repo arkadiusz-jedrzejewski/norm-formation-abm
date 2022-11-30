@@ -42,7 +42,6 @@ void Agent::reconsider_opinion(double conc, RNG& generator)
 {
 	//std::cout << "index:\t" << index << std::endl;	
 	//std::cout << "conc:\t" << conc << std::endl;
-	double q = 3;
 	std::uniform_real_distribution<double> unif_real_distribution(0, 1);
 	double rand = unif_real_distribution(generator);
 	//std::cout << "rand:\t" << rand << std::endl;
