@@ -1,5 +1,6 @@
 #include "SocialSystem.h"
 #include <iostream>
+#include <fstream>
 
 SocialSystem::SocialSystem(int size, int init_opinion, RandIndProbGenerator& distribution, RNG& generator)
 	:size(size), generator(generator)
@@ -69,15 +70,27 @@ void SocialSystem::single_mcs()
 	print_one_group_size();
 }
 
-void SocialSystem::simulation(int time_horizon)
+void SocialSystem::simulation(int time_horizon, std::string file_name)
 {
+	std::fstream data_file(file_name, std::ios::out);
+
+	data_file << get_conc() << std::endl;
 	for (int i = 0; i < time_horizon; i++)
 	{
 		single_mcs();
+		data_file << get_conc() << std::endl;	//	saving concentration after every MCS
 	}
+
+	data_file.flush();
+	data_file.close();
 }
 
 void SocialSystem::print_one_group_size() const
 {
 	std::cout << "one_group_size:\t" << one_group_size / (double) size << std::endl;
+}
+
+double SocialSystem::get_conc() const
+{
+	return one_group_size / (double) size;
 }

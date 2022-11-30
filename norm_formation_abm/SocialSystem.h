@@ -17,7 +17,9 @@ public:
 	Agent& choose_agent();
 	void single_update();
 	void single_mcs();
-	void simulation(int time_horizon);
+	void simulation(int time_horizon, std::string file_name);
 	void print_one_group_size() const;
+
+	double get_conc() const;
 };
 
