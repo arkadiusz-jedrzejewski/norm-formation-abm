@@ -48,12 +48,12 @@ void Agent::reconsider_opinion(double conc, RNG& generator)
 	if (rand < ind_prob)
 	{
 		//independence, individual learinig
-		nonconformity_function.conformity(*this, conc, generator);
+		nonconformity_function.run(*this, conc, generator);
 	}
 	else 
 	{
 		//conformity, social learining
-		conformity_function.conformity(*this, conc, generator);
+		conformity_function.run(*this, conc, generator);
 	}
 }
 

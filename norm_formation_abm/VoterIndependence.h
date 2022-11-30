@@ -7,6 +7,6 @@ private:
     double f;
 public:
     VoterIndependence(double f);
-    virtual void conformity(Agent& agent, double conc, RNG& generator);
+    virtual void run(Agent& agent, double conc, RNG& generator);
 };
 

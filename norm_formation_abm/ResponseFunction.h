@@ -4,6 +4,6 @@ class Agent;
 class ResponseFunction
 {
 public:
-	virtual void conformity(Agent& agent, double conc, RNG& generator) = 0;
+	virtual void run(Agent& agent, double conc, RNG& generator) = 0;
 };
 
