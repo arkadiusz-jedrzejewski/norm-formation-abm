@@ -1,6 +1,6 @@
 #pragma once
 #include "Agent.h"
-#include "ConformityFunction.h"
+#include "ResponseFunction.h"
 
 class SocialSystem
 {
@@ -14,9 +14,9 @@ private:
 public:
 	SocialSystem(int size, 
 		int init_opinion, 
-		RandIndProbGenerator& distribution, 
-		ConformityFunction& conformity_function, 
-		ConformityFunction& engagement_function, 
+		RandNProbGenerator& distribution, 
+		ResponseFunction& conformity_function, 
+		ResponseFunction& nonconformity_function, 
 		RNG& generator);
 	~SocialSystem();
 

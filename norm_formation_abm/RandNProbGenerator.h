@@ -2,15 +2,15 @@
 #include <random>
 #include "custom_types.h"
 
-class RandIndProbGenerator
+class RandNProbGenerator
 {
 private:
 	double mean;
 protected:
 	RNG& generator;
 public:
-	RandIndProbGenerator(RNG& generator, double mean);
-	virtual double generate_ind_prob() = 0;
+	RandNProbGenerator(RNG& generator, double mean);
+	virtual double generate() = 0;
 	double get_mean() const;
 };
 

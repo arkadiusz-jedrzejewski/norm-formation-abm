@@ -1,12 +1,12 @@
 #pragma once
-#include "ConformityFunction.h"
+#include "ResponseFunction.h"
 class VoterIndependence :
-    public ConformityFunction
+    public ResponseFunction
 {
 private:
     double f;
 public:
     VoterIndependence(double f);
-    virtual void conformity(Agent& agent, double conc, RNG& generator);
+    virtual void run(Agent& agent, double conc, RNG& generator);
 };
 

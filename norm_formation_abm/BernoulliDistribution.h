@@ -1,15 +1,15 @@
 #pragma once
 #include <random>
-#include "RandIndProbGenerator.h"
+#include "RandNProbGenerator.h"
 
 class BernoulliDistribution :
-    public RandIndProbGenerator
+    public RandNProbGenerator
 {
 private:
     double p;
     std::bernoulli_distribution distribution;
 public:
     BernoulliDistribution(RNG& generator, double p);
-    virtual double generate_ind_prob();
+    virtual double generate();
 };
 

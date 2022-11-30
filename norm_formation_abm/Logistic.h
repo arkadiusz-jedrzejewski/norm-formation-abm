@@ -1,13 +1,13 @@
 #pragma once
-#include "ConformityFunction.h"
+#include "ResponseFunction.h"
 class Logistic :
-    public ConformityFunction
+    public ResponseFunction
 {
 private:
     double x0;
     double k;
 public:
     Logistic(double x0, double k);
-    virtual void conformity(Agent& agent, double conc, RNG& generator);
+    virtual void run(Agent& agent, double conc, RNG& generator);
 };
 

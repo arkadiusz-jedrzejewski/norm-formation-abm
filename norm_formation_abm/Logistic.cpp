@@ -5,7 +5,7 @@ Logistic::Logistic(double x0, double k)
 {
 }
 
-void Logistic::conformity(Agent& agent, double conc, RNG& generator)
+void Logistic::run(Agent& agent, double conc, RNG& generator)
 {
 	std::uniform_real_distribution<double> unif_real_distribution(0, 1);
 	int opinion = agent.get_opinion();

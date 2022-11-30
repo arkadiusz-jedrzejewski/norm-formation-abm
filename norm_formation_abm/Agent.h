@@ -1,30 +1,30 @@
 #pragma once
 #include <vector>
-#include "RandIndProbGenerator.h"
-#include "ConformityFunction.h"
-class ConformityFunction;
+#include "RandNProbGenerator.h"
+#include "ResponseFunction.h"
+class ResponseFunction;
 class Agent
 {
 private:
 	int index;
 	int opinion;
-	double ind_prob;	//independence probability
-	RandIndProbGenerator& distribution;
-	ConformityFunction& conformity_function;
-	ConformityFunction& engagement_function;
+	double n_prob;	//	nonconformity proability : with probability n_prob -> nonconformity, otherwise (with probability 1 - n_prob) -> conformity
+	RandNProbGenerator& distribution;
+	ResponseFunction& conformity_function;
+	ResponseFunction& nonconformity_function;
 
 public:
 	Agent(int index, 
 		int opinion, 
-		RandIndProbGenerator& distribution, 
-		ConformityFunction& conformity_function, 
-		ConformityFunction& engagement_function);
+		RandNProbGenerator& distribution, 
+		ResponseFunction& conformity_function, 
+		ResponseFunction& nonconformity_function);
 
 	int get_index() const;
 	int get_opinion() const;
-	double get_ind_prob() const;
+	double get_n_prob() const;
 
-	void change_ind_prob();
+	void change_n_prob();
 
 	void change_opinion();
 	void set_opinion(int new_opinion);

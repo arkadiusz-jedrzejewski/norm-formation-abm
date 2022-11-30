@@ -18,9 +18,9 @@ int main()
     std::mt19937_64 generator(10);
     BernoulliDistribution distribution(generator, 0.2);
     Power conformity_function(3);
-    VoterIndependence engagement_function(0.5);
+    VoterIndependence nonconformity_function(0.5);
 
-    SocialSystem test_system(10000, 1, distribution, conformity_function, engagement_function, generator);
+    SocialSystem test_system(10000, 1, distribution, conformity_function, nonconformity_function, generator);
     test_system.print_one_group_size();
     //test_system.print_agents();
     test_system.simulation(200, "name.txt");
@@ -29,7 +29,7 @@ int main()
     //test_system.choose_agent();
     std::cout << "///////////////////" << std::endl;
     //agent.change_opinion();
-    //agent.change_ind_prob();
+    //agent.change_n_prob();
     //test_system.print_agents();
     test_system.print_one_group_size();
 }
