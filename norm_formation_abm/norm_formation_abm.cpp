@@ -8,6 +8,7 @@
 #include "Uniform.h"
 #include "SocialSystem.h"
 #include "Power.h"
+#include "SymmetricPower.h"
 
 int main()
 {

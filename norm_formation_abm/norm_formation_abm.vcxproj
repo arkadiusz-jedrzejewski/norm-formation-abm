@@ -146,7 +146,7 @@
     <ClCompile Include="Power.cpp" />
     <ClCompile Include="RandIndProbGenerator.cpp" />
     <ClCompile Include="SocialSystem.cpp" />
-    <ClCompile Include="SymmeticPower.cpp" />
+    <ClCompile Include="SymmetricPower.cpp" />
     <ClCompile Include="Uniform.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -157,7 +157,7 @@
     <ClInclude Include="Power.h" />
     <ClInclude Include="RandIndProbGenerator.h" />
     <ClInclude Include="SocialSystem.h" />
-    <ClInclude Include="SymmeticPower.h" />
+    <ClInclude Include="SymmetricPower.h" />
     <ClInclude Include="Uniform.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
