@@ -142,6 +142,7 @@
     <ClCompile Include="Agent.cpp" />
     <ClCompile Include="BernoulliDistribution.cpp" />
     <ClCompile Include="ConformityFunction.cpp" />
+    <ClCompile Include="Logistic.cpp" />
     <ClCompile Include="norm_formation_abm.cpp" />
     <ClCompile Include="Power.cpp" />
     <ClCompile Include="RandIndProbGenerator.cpp" />
@@ -154,6 +155,7 @@
     <ClInclude Include="BernoulliDistribution.h" />
     <ClInclude Include="ConformityFunction.h" />
     <ClInclude Include="custom_types.h" />
+    <ClInclude Include="Logistic.h" />
     <ClInclude Include="Power.h" />
     <ClInclude Include="RandIndProbGenerator.h" />
     <ClInclude Include="SocialSystem.h" />
