@@ -11,14 +11,14 @@ private:
 	double ind_prob;	//independence probability
 	RandIndProbGenerator& distribution;
 	ResponseFunction& conformity_function;
-	ResponseFunction& engagement_function;
+	ResponseFunction& nonconformity_function;
 
 public:
 	Agent(int index, 
 		int opinion, 
 		RandIndProbGenerator& distribution, 
 		ResponseFunction& conformity_function, 
-		ResponseFunction& engagement_function);
+		ResponseFunction& nonconformity_function);
 
 	int get_index() const;
 	int get_opinion() const;

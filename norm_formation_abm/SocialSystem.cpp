@@ -3,13 +3,13 @@
 #include <iostream>
 #include <fstream>
 
-SocialSystem::SocialSystem(int size, int init_opinion, RandIndProbGenerator& distribution, ResponseFunction& conformity_function, ResponseFunction& engagement_function, RNG& generator)
+SocialSystem::SocialSystem(int size, int init_opinion, RandIndProbGenerator& distribution, ResponseFunction& conformity_function, ResponseFunction& nonconformity_function, RNG& generator)
 	:size(size), generator(generator)
 {
 	agents = new Agent * [size];
 	for (int i = 0; i < size; i++)
 	{
-		agents[i] = new Agent(i, init_opinion, distribution, conformity_function, engagement_function);
+		agents[i] = new Agent(i, init_opinion, distribution, conformity_function, nonconformity_function);
 	}
 	unif_int_distribution = std::uniform_int_distribution<int>(0, size - 1);
 

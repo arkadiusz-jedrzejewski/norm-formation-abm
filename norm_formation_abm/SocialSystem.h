@@ -16,7 +16,7 @@ public:
 		int init_opinion, 
 		RandIndProbGenerator& distribution, 
 		ResponseFunction& conformity_function, 
-		ResponseFunction& engagement_function, 
+		ResponseFunction& nonconformity_function, 
 		RNG& generator);
 	~SocialSystem();
 

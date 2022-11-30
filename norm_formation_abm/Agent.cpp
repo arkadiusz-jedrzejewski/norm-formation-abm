@@ -1,8 +1,8 @@
 #include "Agent.h"
 #include <iostream>
 
-Agent::Agent(int index, int opinion, RandIndProbGenerator& distribution, ResponseFunction& conformity_function, ResponseFunction& engagement_function)
-	: index(index), opinion(opinion), distribution(distribution), conformity_function(conformity_function), engagement_function(engagement_function)
+Agent::Agent(int index, int opinion, RandIndProbGenerator& distribution, ResponseFunction& conformity_function, ResponseFunction& nonconformity_function)
+	: index(index), opinion(opinion), distribution(distribution), conformity_function(conformity_function), nonconformity_function(nonconformity_function)
 {
 	ind_prob = distribution.generate_ind_prob();
 }
@@ -48,7 +48,7 @@ void Agent::reconsider_opinion(double conc, RNG& generator)
 	if (rand < ind_prob)
 	{
 		//independence, individual learinig
-		engagement_function.conformity(*this, conc, generator);
+		nonconformity_function.conformity(*this, conc, generator);
 	}
 	else 
 	{
