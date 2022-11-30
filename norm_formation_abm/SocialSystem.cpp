@@ -3,8 +3,16 @@
 #include <iostream>
 #include <fstream>
 
-SocialSystem::SocialSystem(int size, int init_opinion, RandNProbGenerator& distribution, ResponseFunction& conformity_function, ResponseFunction& nonconformity_function, RNG& generator)
-	:size(size), generator(generator)
+SocialSystem::SocialSystem(
+	int size, 
+	int init_opinion, 
+	RandNProbGenerator& distribution, 
+	ResponseFunction& conformity_function, 
+	ResponseFunction& nonconformity_function, 
+	RNG& generator)
+	:
+	size(size), 
+	generator(generator)
 {
 	agents = new Agent * [size];
 	for (int i = 0; i < size; i++)
