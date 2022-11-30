@@ -4,7 +4,7 @@
 Agent::Agent(int index, int opinion, RandNProbGenerator& distribution, ResponseFunction& conformity_function, ResponseFunction& nonconformity_function)
 	: index(index), opinion(opinion), distribution(distribution), conformity_function(conformity_function), nonconformity_function(nonconformity_function)
 {
-	n_prob = distribution.generate_ind_prob();
+	n_prob = distribution.generate();
 }
 
 int Agent::get_index() const
@@ -24,7 +24,7 @@ double Agent::get_n_prob() const
 
 void Agent::change_n_prob()
 {
-	n_prob = distribution.generate_ind_prob();
+	n_prob = distribution.generate();
 }
 
 void Agent::change_opinion()

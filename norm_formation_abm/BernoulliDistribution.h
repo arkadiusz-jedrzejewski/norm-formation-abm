@@ -10,6 +10,6 @@ private:
     std::bernoulli_distribution distribution;
 public:
     BernoulliDistribution(RNG& generator, double p);
-    virtual double generate_ind_prob();
+    virtual double generate();
 };
 

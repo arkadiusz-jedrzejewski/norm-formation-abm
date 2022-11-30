@@ -8,6 +8,6 @@ private:
     std::uniform_real_distribution<double> distribution;
 public:
     Uniform(RNG& generator, double a);
-    virtual double generate_ind_prob();
+    virtual double generate();
 };
 

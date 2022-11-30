@@ -10,7 +10,7 @@ protected:
 	RNG& generator;
 public:
 	RandNProbGenerator(RNG& generator, double mean);
-	virtual double generate_ind_prob() = 0;
+	virtual double generate() = 0;
 	double get_mean() const;
 };
 

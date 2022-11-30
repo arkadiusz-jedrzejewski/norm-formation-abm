@@ -6,7 +6,7 @@ Uniform::Uniform(RNG& generator, double a)
 	distribution = std::uniform_real_distribution<double>(0, a);
 }
 
-double Uniform::generate_ind_prob()
+double Uniform::generate()
 {
 	return distribution(generator);
 }

@@ -6,7 +6,7 @@ BernoulliDistribution::BernoulliDistribution(RNG& generator, double p)
 	distribution = std::bernoulli_distribution(p);
 }
 
-double BernoulliDistribution::generate_ind_prob()
+double BernoulliDistribution::generate()
 {
 	return distribution(generator);
 }
