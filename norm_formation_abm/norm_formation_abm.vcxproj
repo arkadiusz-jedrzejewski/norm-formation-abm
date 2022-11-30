@@ -145,7 +145,7 @@
     <ClCompile Include="Logistic.cpp" />
     <ClCompile Include="norm_formation_abm.cpp" />
     <ClCompile Include="Power.cpp" />
-    <ClCompile Include="RandIndProbGenerator.cpp" />
+    <ClCompile Include="RandNProbGenerator.cpp" />
     <ClCompile Include="SocialSystem.cpp" />
     <ClCompile Include="SymmetricPower.cpp" />
     <ClCompile Include="Uniform.cpp" />
@@ -158,7 +158,7 @@
     <ClInclude Include="custom_types.h" />
     <ClInclude Include="Logistic.h" />
     <ClInclude Include="Power.h" />
-    <ClInclude Include="RandIndProbGenerator.h" />
+    <ClInclude Include="RandNProbGenerator.h" />
     <ClInclude Include="SocialSystem.h" />
     <ClInclude Include="SymmetricPower.h" />
     <ClInclude Include="Uniform.h" />

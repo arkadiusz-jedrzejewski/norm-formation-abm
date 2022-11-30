@@ -1,6 +1,6 @@
 #pragma once
 #include <vector>
-#include "RandIndProbGenerator.h"
+#include "RandNProbGenerator.h"
 #include "ResponseFunction.h"
 class ResponseFunction;
 class Agent
@@ -9,14 +9,14 @@ private:
 	int index;
 	int opinion;
 	double n_prob;	//	nonconformity proability : with probability n_prob -> nonconformity, otherwise (with probability 1 - n_prob) -> conformity
-	RandIndProbGenerator& distribution;
+	RandNProbGenerator& distribution;
 	ResponseFunction& conformity_function;
 	ResponseFunction& nonconformity_function;
 
 public:
 	Agent(int index, 
 		int opinion, 
-		RandIndProbGenerator& distribution, 
+		RandNProbGenerator& distribution, 
 		ResponseFunction& conformity_function, 
 		ResponseFunction& nonconformity_function);
 

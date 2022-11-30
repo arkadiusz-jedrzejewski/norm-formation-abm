@@ -1,7 +1,7 @@
 #include "BernoulliDistribution.h"
 
 BernoulliDistribution::BernoulliDistribution(RNG& generator, double p)
-	: RandIndProbGenerator(generator, p), p(p)
+	: RandNProbGenerator(generator, p), p(p)
 {
 	distribution = std::bernoulli_distribution(p);
 }

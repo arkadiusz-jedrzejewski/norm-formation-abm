@@ -1,7 +1,7 @@
 #pragma once
-#include "RandIndProbGenerator.h"
+#include "RandNProbGenerator.h"
 class Uniform :
-    public RandIndProbGenerator
+    public RandNProbGenerator
 {
 private:
     double a; //distribution support: (0, a)

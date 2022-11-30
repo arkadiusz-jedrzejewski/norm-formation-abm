@@ -1,7 +1,7 @@
 #include "Agent.h"
 #include <iostream>
 
-Agent::Agent(int index, int opinion, RandIndProbGenerator& distribution, ResponseFunction& conformity_function, ResponseFunction& nonconformity_function)
+Agent::Agent(int index, int opinion, RandNProbGenerator& distribution, ResponseFunction& conformity_function, ResponseFunction& nonconformity_function)
 	: index(index), opinion(opinion), distribution(distribution), conformity_function(conformity_function), nonconformity_function(nonconformity_function)
 {
 	n_prob = distribution.generate_ind_prob();

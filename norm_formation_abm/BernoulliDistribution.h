@@ -1,9 +1,9 @@
 #pragma once
 #include <random>
-#include "RandIndProbGenerator.h"
+#include "RandNProbGenerator.h"
 
 class BernoulliDistribution :
-    public RandIndProbGenerator
+    public RandNProbGenerator
 {
 private:
     double p;
