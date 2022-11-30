@@ -22,7 +22,7 @@ public:
 
 	int get_index() const;
 	int get_opinion() const;
-	double get_ind_prob() const;
+	double get_n_prob() const;
 
 	void change_ind_prob();
 

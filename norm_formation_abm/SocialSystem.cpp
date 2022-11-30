@@ -40,7 +40,7 @@ void SocialSystem::print_agents() const
 	{
 		std::cout << agents[i]->get_index() << "\t" 
 			<< agents[i]->get_opinion() << "\t" 
-			<< agents[i]->get_ind_prob() << std::endl;
+			<< agents[i]->get_n_prob() << std::endl;
 	}
 }
 

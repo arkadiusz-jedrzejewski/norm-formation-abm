@@ -17,7 +17,7 @@ int Agent::get_opinion() const
 	return opinion;
 }
 
-double Agent::get_ind_prob() const
+double Agent::get_n_prob() const
 {
 	return n_prob;
 }
