@@ -7,14 +7,16 @@
 #include "BernoulliDistribution.h"
 #include "Uniform.h"
 #include "SocialSystem.h"
+#include "Power.h"
 
 int main()
 {
     std::cout << "Hello World!\n";
     std::mt19937_64 generator(10);
     BernoulliDistribution distribution(generator, 0.2);
-   
-    SocialSystem test_system(10000, 1, distribution, generator);
+    Power conformity_function(3);
+
+    SocialSystem test_system(10000, 1, distribution, conformity_function, generator);
     test_system.print_one_group_size();
     //test_system.print_agents();
     test_system.simulation(200, "name.txt");
