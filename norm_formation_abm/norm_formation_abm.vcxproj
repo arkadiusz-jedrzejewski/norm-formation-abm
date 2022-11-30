@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="Agent.cpp" />
     <ClCompile Include="BernoulliDistribution.cpp" />
+    <ClCompile Include="ConformityFunction.cpp" />
     <ClCompile Include="norm_formation_abm.cpp" />
     <ClCompile Include="RandIndProbGenerator.cpp" />
     <ClCompile Include="SocialSystem.cpp" />
@@ -149,6 +150,7 @@
   <ItemGroup>
     <ClInclude Include="Agent.h" />
     <ClInclude Include="BernoulliDistribution.h" />
+    <ClInclude Include="ConformityFunction.h" />
     <ClInclude Include="custom_types.h" />
     <ClInclude Include="RandIndProbGenerator.h" />
     <ClInclude Include="SocialSystem.h" />
