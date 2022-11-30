@@ -29,7 +29,7 @@ int main()
     //test_system.choose_agent();
     std::cout << "///////////////////" << std::endl;
     //agent.change_opinion();
-    //agent.change_ind_prob();
+    //agent.change_n_prob();
     //test_system.print_agents();
     test_system.print_one_group_size();
 }

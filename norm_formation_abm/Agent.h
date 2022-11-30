@@ -24,7 +24,7 @@ public:
 	int get_opinion() const;
 	double get_n_prob() const;
 
-	void change_ind_prob();
+	void change_n_prob();
 
 	void change_opinion();
 	void set_opinion(int new_opinion);

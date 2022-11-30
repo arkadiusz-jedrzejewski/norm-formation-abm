@@ -22,7 +22,7 @@ double Agent::get_n_prob() const
 	return n_prob;
 }
 
-void Agent::change_ind_prob()
+void Agent::change_n_prob()
 {
 	n_prob = distribution.generate_ind_prob();
 }
