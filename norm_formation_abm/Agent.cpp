@@ -1,8 +1,8 @@
 #include "Agent.h"
 #include <iostream>
 
-Agent::Agent(int index, int opinion, RandIndProbGenerator& distribution)
-	: index(index), opinion(opinion), distribution(distribution)
+Agent::Agent(int index, int opinion, RandIndProbGenerator& distribution, ConformityFunction& conformity_function)
+	: index(index), opinion(opinion), distribution(distribution), conformity_function(conformity_function)
 {
 	ind_prob = distribution.generate_ind_prob();
 }
@@ -42,7 +42,6 @@ void Agent::reconsider_opinion(double conc, RNG& generator)
 {
 	//std::cout << "index:\t" << index << std::endl;	
 	//std::cout << "conc:\t" << conc << std::endl;
-	double q = 3;
 	std::uniform_real_distribution<double> unif_real_distribution(0, 1);
 	double rand = unif_real_distribution(generator);
 	//std::cout << "rand:\t" << rand << std::endl;
@@ -59,15 +58,7 @@ void Agent::reconsider_opinion(double conc, RNG& generator)
 	else 
 	{
 		//conformity, social learining
-		double rand3 = unif_real_distribution(generator);
-		if (rand3 < std::pow(conc, q))
-		{
-			set_opinion(1);
-		}
-		else if(rand3< std::pow(conc, q) + std::pow(1-conc, q))
-		{
-			set_opinion(-1);
-		}
+		conformity_function.conformity(*this, conc, generator);
 	}
 }
 

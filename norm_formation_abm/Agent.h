@@ -1,7 +1,8 @@
 #pragma once
 #include <vector>
 #include "RandIndProbGenerator.h"
-
+#include "ConformityFunction.h"
+class ConformityFunction;
 class Agent
 {
 private:
@@ -9,9 +10,10 @@ private:
 	int opinion;
 	double ind_prob;	//independence probability
 	RandIndProbGenerator& distribution;
+	ConformityFunction& conformity_function;
 
 public:
-	Agent(int index, int opinion, RandIndProbGenerator& distribution);
+	Agent(int index, int opinion, RandIndProbGenerator& distribution, ConformityFunction& conformity_function);
 
 	int get_index() const;
 	int get_opinion() const;
