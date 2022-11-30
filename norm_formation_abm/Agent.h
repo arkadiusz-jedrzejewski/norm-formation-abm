@@ -8,7 +8,7 @@ class Agent
 private:
 	int index;
 	int opinion;
-	double ind_prob;	//independence probability
+	double n_prob;	//	nonconformity proability : with probability n_prob -> nonconformity, otherwise (with probability 1 - n_prob) -> conformity
 	RandIndProbGenerator& distribution;
 	ResponseFunction& conformity_function;
 	ResponseFunction& nonconformity_function;

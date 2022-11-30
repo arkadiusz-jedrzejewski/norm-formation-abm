@@ -35,7 +35,7 @@ SocialSystem::~SocialSystem()
 
 void SocialSystem::print_agents() const
 {
-	std::cout << "index\topinion\tind_prob" << std::endl;
+	std::cout << "index\topinion\tn_prob" << std::endl;
 	for (int i = 0; i < size; i++)
 	{
 		std::cout << agents[i]->get_index() << "\t" 
