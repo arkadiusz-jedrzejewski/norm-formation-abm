@@ -149,6 +149,7 @@
     <ClCompile Include="SocialSystem.cpp" />
     <ClCompile Include="SymmetricPower.cpp" />
     <ClCompile Include="Uniform.cpp" />
+    <ClCompile Include="VoterIndependence.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Agent.h" />
@@ -161,6 +162,7 @@
     <ClInclude Include="SocialSystem.h" />
     <ClInclude Include="SymmetricPower.h" />
     <ClInclude Include="Uniform.h" />
+    <ClInclude Include="VoterIndependence.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
