@@ -12,7 +12,12 @@ private:
 	int one_group_size; //number of agents with opinion 1
 
 public:
-	SocialSystem(int size, int init_opinion, RandIndProbGenerator& distribution, ConformityFunction& conformity_function, RNG& generator);
+	SocialSystem(int size, 
+		int init_opinion, 
+		RandIndProbGenerator& distribution, 
+		ConformityFunction& conformity_function, 
+		ConformityFunction& engagement_function, 
+		RNG& generator);
 	~SocialSystem();
 
 	void print_agents() const;
