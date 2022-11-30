@@ -70,9 +70,8 @@ void SocialSystem::single_mcs()
 	print_one_group_size();
 }
 
-void SocialSystem::simulation(int time_horizon)
+void SocialSystem::simulation(int time_horizon, std::string file_name)
 {
-	std::string file_name = "name.txt";
 	std::fstream data_file(file_name, std::ios::out);
 
 	data_file << get_conc() << std::endl;

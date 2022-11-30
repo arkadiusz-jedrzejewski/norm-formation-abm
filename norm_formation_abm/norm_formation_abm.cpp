@@ -17,7 +17,7 @@ int main()
     SocialSystem test_system(10000, 1, distribution, generator);
     test_system.print_one_group_size();
     //test_system.print_agents();
-    test_system.simulation(200);
+    test_system.simulation(200, "name.txt");
     //Agent& agent = test_system.choose_agent();
     //test_system.choose_agent();
     //test_system.choose_agent();
