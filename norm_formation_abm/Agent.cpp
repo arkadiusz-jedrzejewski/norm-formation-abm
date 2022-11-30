@@ -1,8 +1,18 @@
 #include "Agent.h"
 #include <iostream>
 
-Agent::Agent(int index, int opinion, RandNProbGenerator& distribution, ResponseFunction& conformity_function, ResponseFunction& nonconformity_function)
-	: index(index), opinion(opinion), distribution(distribution), conformity_function(conformity_function), nonconformity_function(nonconformity_function)
+Agent::Agent(
+	int index, 
+	int opinion, 
+	RandNProbGenerator& distribution, 
+	ResponseFunction& conformity_function, 
+	ResponseFunction& nonconformity_function)
+	: 
+	index(index), 
+	opinion(opinion), 
+	distribution(distribution), 
+	conformity_function(conformity_function), 
+	nonconformity_function(nonconformity_function)
 {
 	n_prob = distribution.generate();
 }
@@ -29,7 +39,7 @@ void Agent::change_n_prob()
 
 void Agent::change_opinion()
 {
-	// changes the agent's opinion to the opposit
+	//	changes the agent's opinion to the opposit
 	opinion *=-1;
 }
 
@@ -50,7 +60,7 @@ void Agent::reconsider_opinion(double conc, RNG& generator)
 	}
 	else 
 	{
-		//	conformity
+		//	conformity : with probability 1 - n_prob
 		conformity_function.run(*this, conc, generator);
 	}
 }
