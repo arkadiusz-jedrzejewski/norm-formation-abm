@@ -14,33 +14,28 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
-    std::mt19937_64 generator(10);
-    BernoulliDistribution distribution(generator, 0.2);
-    Power conformity_function(3);
-    VoterIndependence nonconformity_function(0.5);
+    int seed = 10;
+    std::mt19937_64 generator(seed);
 
-    SocialSystem test_system(10000, 1, distribution, conformity_function, nonconformity_function, generator);
-    test_system.print_one_group_size();
-    //test_system.print_agents();
-    test_system.simulation(200, "name.txt");
-    //Agent& agent = test_system.choose_agent();
-    //test_system.choose_agent();
-    //test_system.choose_agent();
-    std::cout << "///////////////////" << std::endl;
-    //agent.change_opinion();
-    //agent.change_n_prob();
-    //test_system.print_agents();
-    test_system.print_one_group_size();
+    double p = 0.2;
+    BernoulliDistribution distribution(generator, p);
+
+    double q = 3;
+    Power conformity_function(q);
+
+    double f = 0.5;
+    VoterIndependence nonconformity_function(f);
+
+    int system_size = 10000;
+    int init_opinions = 1;
+    SocialSystem social_system(system_size, 
+        init_opinions, 
+        distribution, 
+        conformity_function, 
+        nonconformity_function, 
+        generator);
+    
+    int time_horizon = 200;
+    std::string file_name = "name.txt";
+    social_system.simulation(time_horizon, file_name);
 }
-
-// Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
-// Debugowanie programu: F5 lub menu Debugowanie > Rozpocznij debugowanie
-
-// Porady dotyczące rozpoczynania pracy:
-//   1. Użyj okna Eksploratora rozwiązań, aby dodać pliki i zarządzać nimi
-//   2. Użyj okna programu Team Explorer, aby nawiązać połączenie z kontrolą źródła
-//   3. Użyj okna Dane wyjściowe, aby sprawdzić dane wyjściowe kompilacji i inne komunikaty
-//   4. Użyj okna Lista błędów, aby zobaczyć błędy
-//   5. Wybierz pozycję Projekt > Dodaj nowy element, aby utworzyć nowe pliki kodu, lub wybierz pozycję Projekt > Dodaj istniejący element, aby dodać istniejące pliku kodu do projektu
-//   6. Aby w przyszłości ponownie otworzyć ten projekt, przejdź do pozycji Plik > Otwórz > Projekt i wybierz plik sln
