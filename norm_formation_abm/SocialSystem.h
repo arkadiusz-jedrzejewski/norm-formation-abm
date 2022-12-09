@@ -12,8 +12,9 @@ private:
 	int one_group_size; //number of agents with opinion 1
 
 public:
-	SocialSystem(int size, 
-		int init_opinion, 
+	SocialSystem(int size,
+		int init_opinion,
+		bool is_annealed,
 		RandNProbGenerator& distribution, 
 		ResponseFunction& conformity_function, 
 		ResponseFunction& nonconformity_function, 

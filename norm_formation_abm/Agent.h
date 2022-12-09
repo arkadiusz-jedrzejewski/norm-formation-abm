@@ -8,14 +8,16 @@ class Agent
 private:
 	int index;
 	int opinion;
+	bool is_annealed;
 	double n_prob;	//	nonconformity proability : with probability n_prob -> nonconformity, otherwise (with probability 1 - n_prob) -> conformity
 	RandNProbGenerator& distribution;
 	ResponseFunction& conformity_function;
 	ResponseFunction& nonconformity_function;
 
 public:
-	Agent(int index, 
-		int opinion, 
+	Agent(int index,
+		int opinion,
+		bool is_annealed,
 		RandNProbGenerator& distribution, 
 		ResponseFunction& conformity_function, 
 		ResponseFunction& nonconformity_function);
