@@ -4,12 +4,14 @@
 Agent::Agent(
 	int index, 
 	int opinion, 
+	bool is_annealed,
 	RandNProbGenerator& distribution, 
 	ResponseFunction& conformity_function, 
 	ResponseFunction& nonconformity_function)
 	: 
 	index(index), 
 	opinion(opinion), 
+	is_annealed(is_annealed),
 	distribution(distribution), 
 	conformity_function(conformity_function), 
 	nonconformity_function(nonconformity_function)
@@ -62,6 +64,13 @@ void Agent::reconsider_opinion(double conc, RNG& generator)
 	{
 		//	conformity : with probability 1 - n_prob
 		conformity_function.run(*this, conc, generator);
+	}
+	
+	if (is_annealed)
+	{
+		//	if annealed mode is on, an agent draws level (probability p) of nonconfomirty each time from the given distibution
+		//	if annealed mode is off -> quenched mode is on, and an agnet does not change its level (probability p) of nonconformity, which was initially drawn form the given distibution
+		change_n_prob();
 	}
 }
 
