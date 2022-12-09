@@ -32,7 +32,7 @@ int main(int argc, char** argv)
     int init_opinions = atoi(argv[7]);
     SocialSystem social_system(system_size,
         init_opinions,
-        true,
+        is_annealed,
         distribution,
         conformity_function,
         nonconformity_function,
