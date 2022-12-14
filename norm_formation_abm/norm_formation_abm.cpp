@@ -11,6 +11,7 @@
 #include "SymmetricPower.h"
 #include "Logistic.h"
 #include "VoterIndependence.h"
+#include "IndividualLearning.h"
 
 int main(int argc, char** argv)
 {
@@ -26,7 +27,7 @@ int main(int argc, char** argv)
     Power conformity_function(q);
     
     double f = atof(argv[5]);
-    VoterIndependence nonconformity_function(f);
+    IndividualLearning nonconformity_function(f);
     
     int system_size = atoi(argv[6]);
     int init_opinions = atoi(argv[7]);
