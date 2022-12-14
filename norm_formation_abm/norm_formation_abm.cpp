@@ -12,6 +12,7 @@
 #include "Logistic.h"
 #include "VoterIndependence.h"
 #include "IndividualLearning.h"
+#include "MovingUniform.h"
 
 int main(int argc, char** argv)
 {
@@ -21,13 +22,14 @@ int main(int argc, char** argv)
     bool is_annealed = atoi(argv[2]);
     
     double p = atof(argv[3]);
-    BernoulliDistribution distribution(generator, p);
-    
+    //BernoulliDistribution distribution(generator, p);
+    MovingUniform distribution(generator, p, 0.05);
+
     double q = atof(argv[4]);
     Power conformity_function(q);
     
     double f = atof(argv[5]);
-    IndividualLearning nonconformity_function(f);
+    VoterIndependence nonconformity_function(f);
     
     int system_size = atoi(argv[6]);
     int init_opinions = atoi(argv[7]);
