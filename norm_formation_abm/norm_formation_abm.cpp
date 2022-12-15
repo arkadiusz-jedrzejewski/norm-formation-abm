@@ -21,18 +21,19 @@ int main(int argc, char** argv)
 
     bool is_annealed = atoi(argv[2]);
     
-    double p = atof(argv[3]);
+    double a = atof(argv[9]);
+    double eps = atof(argv[10]);
     //BernoulliDistribution distribution(generator, p);
-    MovingUniform distribution(generator, p, 0.05);
+    MovingUniform distribution(generator, a, eps);
 
-    double q = atof(argv[4]);
+    double q = atof(argv[3]);
     Power conformity_function(q);
     
-    double f = atof(argv[5]);
+    double f = atof(argv[4]);
     VoterIndependence nonconformity_function(f);
     
-    int system_size = atoi(argv[6]);
-    int init_opinions = atoi(argv[7]);
+    int system_size = atoi(argv[5]);
+    int init_opinions = atoi(argv[6]);
     SocialSystem social_system(system_size,
         init_opinions,
         is_annealed,
@@ -41,7 +42,7 @@ int main(int argc, char** argv)
         nonconformity_function,
         generator);
     
-    int time_horizon = atoi(argv[8]);
-    std::string file_name = argv[9];
+    int time_horizon = atoi(argv[7]);
+    std::string file_name = argv[8];
     social_system.simulation(time_horizon, file_name);
 }
