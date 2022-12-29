@@ -16,23 +16,25 @@
 
 int main(int argc, char** argv)
 {
-    int seed = atoi(argv[1]);
+    int seed = atoi(argv[2]);
     std::mt19937_64 generator(seed);
 
-    bool is_annealed = atoi(argv[2]);
+    bool is_annealed = atoi(argv[5]);
     
-    double p = atof(argv[9]);
+    double p = atof(argv[11]);
     //double eps = atof(argv[10]);
     BernoulliDistribution distribution(generator, p);
     //MovingUniform distribution(generator, a, eps);
 
-    double q = atof(argv[3]);
-    Power conformity_function(q);
+    double q = atof(argv[7]);
+    SymmetricPower conformity_function(q);
     
-    double f = atof(argv[4]);
-    VoterIndependence nonconformity_function(f);
+    double x0 = atof(argv[8]);
+    double k = atof(argv[9]);
+    double m = atof(argv[10]);
+    Logistic nonconformity_function(x0, k, m);
     
-    int system_size = atoi(argv[5]);
+    int system_size = atoi(argv[3]);
     int init_opinions = atoi(argv[6]);
     SocialSystem social_system(system_size,
         init_opinions,
@@ -42,7 +44,7 @@ int main(int argc, char** argv)
         nonconformity_function,
         generator);
     
-    int time_horizon = atoi(argv[7]);
-    std::string file_name = argv[8];
+    int time_horizon = atoi(argv[4]);
+    std::string file_name = argv[1];
     social_system.simulation(time_horizon, file_name);
 }
