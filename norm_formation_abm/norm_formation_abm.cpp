@@ -21,10 +21,10 @@ int main(int argc, char** argv)
 
     bool is_annealed = atoi(argv[2]);
     
-    double a = atof(argv[9]);
-    double eps = atof(argv[10]);
-    //BernoulliDistribution distribution(generator, p);
-    MovingUniform distribution(generator, a, eps);
+    double p = atof(argv[9]);
+    //double eps = atof(argv[10]);
+    BernoulliDistribution distribution(generator, p);
+    //MovingUniform distribution(generator, a, eps);
 
     double q = atof(argv[3]);
     Power conformity_function(q);
