@@ -1,7 +1,7 @@
 #include "Logistic.h"
 
-Logistic::Logistic(double x0, double k)
-	: x0(x0), k(k)
+Logistic::Logistic(double x0, double k, double m)
+	: x0(x0), k(k), m(m)
 {
 }
 
@@ -11,7 +11,7 @@ void Logistic::run(Agent& agent, double conc, RNG& generator)
 	int opinion = agent.get_opinion();
 	double rand = unif_real_distribution(generator);
 
-	if (rand < 1.0 / (1 + std::exp(k * (conc - x0))))
+	if (rand < 2.0 * m / (1 + std::exp(k * (conc - x0))))
 	{
 		agent.set_opinion(1);
 	}
