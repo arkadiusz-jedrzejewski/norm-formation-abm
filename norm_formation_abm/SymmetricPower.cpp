@@ -13,7 +13,7 @@ void SymmetricPower::run(Agent& agent, double conc, RNG& generator)
 
 	if (opinion == 1)
 	{
-		if (conc < 0.5)
+		if (conc > 0.5)
 		{
 			if (rand < std::pow(2 * (1 - conc), q) / 2.0)
 			{
