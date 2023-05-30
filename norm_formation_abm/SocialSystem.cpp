@@ -66,7 +66,7 @@ void SocialSystem::single_update()
 	int init_opinion = chosen_agent.get_opinion();
 	//chosen_agent.change_opinion(); // TODO: change_opinion() may return changed opinion -> more compact code
 	//double conc = (init_opinion == 1) ? (one_group_size - 1.0) / (size - 1.0) : one_group_size / (size - 1.0); // conc is a concentration exluding the chosen agent'
-	double conc = one_group_size / size; // total concetration of A in the system
+	double conc = one_group_size / (double) size; // total concetration of A in the system
 	chosen_agent.reconsider_opinion(conc, generator);
 	one_group_size += (chosen_agent.get_opinion() - init_opinion) / 2;
 }

@@ -11,19 +11,27 @@ void Power::run(Agent& agent, double conc, RNG& generator)
 	int opinion = agent.get_opinion();
 	double rand = unif_real_distribution(generator);
 
-	if (opinion == 1)
+	//if (opinion == 1)
+	//{
+	//	if (rand < std::pow(1 - conc, q))
+	//	{
+	//		agent.set_opinion(-1);
+	//	}
+	//}
+	//else
+	//{
+	//	// opinion = -1
+	//	if (rand < std::pow(conc, q))
+	//	{
+	//		agent.set_opinion(1);
+	//	}
+	//}
+	if (rand < std::pow(1 - conc, q))
 	{
-		if (rand < std::pow(1 - conc, q))
-		{
-			agent.set_opinion(-1);
-		}
+		agent.set_opinion(-1);
 	}
-	else
+	else if (rand < std::pow(1 - conc, q) + std::pow(conc, q))
 	{
-		// opinion = -1
-		if (rand < std::pow(conc, q))
-		{
-			agent.set_opinion(1);
-		}
+		agent.set_opinion(1);
 	}
 }

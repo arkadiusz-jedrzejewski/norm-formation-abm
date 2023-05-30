@@ -16,7 +16,15 @@ Agent::Agent(
 	conformity_function(conformity_function), 
 	nonconformity_function(nonconformity_function)
 {
-	n_prob = distribution.generate();
+	if (index < round(distribution.get_mean() * 10))
+	{
+		n_prob = 1;
+	}
+	else
+	{
+		n_prob = 0;
+	}
+	//n_prob = distribution.generate();
 }
 
 int Agent::get_index() const
