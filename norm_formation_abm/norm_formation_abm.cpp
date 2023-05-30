@@ -27,7 +27,7 @@ int main(int argc, char** argv)
     //MovingUniform distribution(generator, a, eps);
 
     double q = atof(argv[7]);
-    SymmetricPower conformity_function(q);
+    Power conformity_function(q);
     
     double x0 = atof(argv[8]);
     double k = atof(argv[9]);
