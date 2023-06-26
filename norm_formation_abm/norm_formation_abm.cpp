@@ -21,30 +21,41 @@ int main(int argc, char** argv)
 
     bool is_annealed = atoi(argv[5]);
     
-    double p = atof(argv[11]);
+    double p = atof(argv[12]);
     //double eps = atof(argv[10]);
     BernoulliDistribution distribution(generator, p);
     //MovingUniform distribution(generator, a, eps);
 
-    double q = atof(argv[7]);
-    Power conformity_function(q);
+    double q = atof(argv[8]);
+    ResponseFunction* conformity_function;
+    bool is_symmetric = atoi(argv[6]);
+    if (is_symmetric)
+    {
+        conformity_function = new SymmetricPower(q);
+    }
+    else
+    {
+        conformity_function = new Power(q);
+    }
     
-    double x0 = atof(argv[8]);
-    double k = atof(argv[9]);
-    double m = atof(argv[10]);
+    double x0 = atof(argv[9]);
+    double k = atof(argv[10]);
+    double m = atof(argv[11]);
     Logistic nonconformity_function(x0, k, m);
     
     int system_size = atoi(argv[3]);
-    int init_opinions = atoi(argv[6]);
+    int init_opinions = atoi(argv[7]);
     SocialSystem social_system(system_size,
         init_opinions,
         is_annealed,
         distribution,
-        conformity_function,
+        *conformity_function,
         nonconformity_function,
         generator);
     
     int time_horizon = atoi(argv[4]);
     std::string file_name = argv[1];
     social_system.simulation(time_horizon, file_name);
+
+    delete conformity_function;
 }
