@@ -78,7 +78,7 @@ void SocialSystem::single_mcs()
 	{
 		single_update();
 	}
-	print_one_group_size();
+	//print_one_group_size();
 }
 
 void SocialSystem::simulation(int time_horizon, std::string file_name)

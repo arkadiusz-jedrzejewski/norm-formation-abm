@@ -37,7 +37,7 @@ int main(int argc, char** argv)
     {
         conformity_function = new Power(q);
     }
-    
+   
     double x0 = atof(argv[9]);
     double k = atof(argv[10]);
     double m = atof(argv[11]);
@@ -55,6 +55,16 @@ int main(int argc, char** argv)
     
     int time_horizon = atoi(argv[4]);
     std::string file_name = argv[1];
+    /*std::cout << "p:\t" << p << std::endl;
+    std::cout << "q:\t" << q << std::endl;
+    std::cout << "k:\t" << k << std::endl;
+    std::cout << "x0:\t" << x0 << std::endl;
+    std::cout << "m:\t" << m << std::endl;
+    std::cout << "is_symmetric:\t" << is_symmetric << std::endl;
+    std::cout << "is_annealed:\t" << is_annealed << std::endl;
+    std::cout << "seed:\t" << seed << std::endl;
+    std::cout << "time_horizon:\t" << time_horizon << std::endl;
+    std::cout << "system_size:\t" << system_size << std::endl;*/
     social_system.simulation(time_horizon, file_name);
 
     delete conformity_function;
