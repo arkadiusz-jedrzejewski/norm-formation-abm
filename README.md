@@ -8,8 +8,8 @@ The model was used in:
 > [DOI: 10.1103/PhysRevResearch.6.033093](https://doi.org/10.1103/PhysRevResearch.6.033093)
 
 ## Related Repository
--Python scripts to run simulations and analyze results: [https://github.com/arkadiusz-jedrzejewski/norm-formation-abm-py](https://github.com/arkadiusz-jedrzejewski/norm-formation-abm-py)
--Matlab scripts to analyze results: [https://github.com/arkadiusz-jedrzejewski/norm-formation-abm-py](https://github.com/arkadiusz-jedrzejewski/norm-formation-m)
+- Python scripts to run simulations and analyze results: [https://github.com/arkadiusz-jedrzejewski/norm-formation-abm-py](https://github.com/arkadiusz-jedrzejewski/norm-formation-abm-py)
+- Matlab scripts to analyze results: [https://github.com/arkadiusz-jedrzejewski/norm-formation-abm-py](https://github.com/arkadiusz-jedrzejewski/norm-formation-m)
 
 ## Citation
 If you find this code helpful or use it in your work, please cite the following paper for attribution:
