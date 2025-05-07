@@ -1,5 +1,15 @@
 # norm-formation-abm
-It creates an executable file from C++ code
+This repository contains the C++ implementation of an agent-based model (ABM) used to study the impact of symmetric and nonsymmetric conformity functions on decision-making processes. 
+The model was used in:
+
+> **Symmetric conformity functions make decision-making processes independent of the distribution of learning strategies**  
+> *Arkadiusz Jędrzejewski* and *Laura Hernández*  
+> _Physical Review Research_, Vol. 6, 033093 (2024)  
+> [DOI: 10.1103/PhysRevResearch.6.033093](https://doi.org/10.1103/PhysRevResearch.6.033093)
+
+## Related Repository
+Python scripts to run simulations and analyze results: [https://github.com/arkadiusz-jedrzejewski/norm-formation-abm-py](https://github.com/arkadiusz-jedrzejewski/norm-formation-abm-py)
+Matlab scripts to analyze results: [https://github.com/arkadiusz-jedrzejewski/norm-formation-abm-py](https://github.com/arkadiusz-jedrzejewski/norm-formation-m)
 
 ## Citation
 If you find this code helpful or use it in your work, please cite the following paper for attribution:
